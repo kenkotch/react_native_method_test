@@ -37,4 +37,22 @@ describe('App Tests', () => {
     instance.resetCounter()
     expect(wrapper.state('counter')).toBe(0)
   })
+
+  it('onPress incrementCounter(1)', () => {
+    const wrapper = shallow(<App />)
+    const instance = wrapper.instance()
+    const spy = jest.spyOn(instance, 'incrementCounter')
+
+    wrapper.find('TouchableOpacity').first().props().onPress()
+    expect(wrapper.state('counter')).toBe(1)
+  })
+
+  it('onPress incrementCounter(4)', () => {
+    const wrapper = shallow(<App />)
+    const instance = wrapper.instance()
+    const spy = jest.spyOn(instance, 'incrementCounter')
+
+    wrapper.find('TouchableOpacity').at(1).props().onPress()
+    expect(wrapper.state('counter')).toBe(4)
+  })
 })
