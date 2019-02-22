@@ -61,5 +61,24 @@ exports[`App Tests App renders the same way every time 1`] = `
       Increment by 4
     </Text>
   </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <Text>
+      Reset
+    </Text>
+  </View>
 </View>
 `;

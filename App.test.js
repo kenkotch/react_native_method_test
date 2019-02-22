@@ -13,11 +13,11 @@ describe('App Tests', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it('incrementCounterByOne should add 1 to counter', () => {
+  it('incrementCounter should add 1 to counter', () => {
     const wrapper = shallow(<App />)
     const instance = wrapper.instance()
     expect(wrapper.state('counter')).toBe(0)
-    instance.incrementCounterByOne()
+    instance.incrementCounter(1)
     expect(wrapper.state('counter')).toBe(1)
   })
 
@@ -25,7 +25,16 @@ describe('App Tests', () => {
     const wrapper = shallow(<App />)
     const instance = wrapper.instance()
     expect(wrapper.state('counter')).toBe(0)
-    instance.incrementCounterByFour()
+    instance.incrementCounter(4)
     expect(wrapper.state('counter')).toBe(4)
+  })
+
+  it('resetCounter', () => {
+    const wrapper = shallow(<App />)
+    const instance = wrapper.instance()
+    instance.incrementCounter(8)
+    expect(wrapper.state('counter')).toBe(8)
+    instance.resetCounter()
+    expect(wrapper.state('counter')).toBe(0)
   })
 })
