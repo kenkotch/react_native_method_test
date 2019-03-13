@@ -11,19 +11,27 @@ export default class App extends React.Component {
   }
 
   incrementCounter = number => {
-    const counter = this.state.counter + number
-    this.setState({ counter })
+    const { counter } = this.state
+    const count = counter + number
+    this.setState({ counter: count })
   }
 
   resetCounter = () => {
     this.setState({ counter: 0 })
   }
 
+  uslessMethodJustForTesting = (message = 'There was no message') => {
+    return message
+  }
+
   render() {
     const { counter } = this.state
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Counter: { counter }</Text>
+      <View style={ styles.container }>
+        <Text style={ styles.welcome }>
+          Counter:
+          { counter }
+        </Text>
         <TouchableOpacity
           onPress={ () => this.incrementCounter(1) }
         >

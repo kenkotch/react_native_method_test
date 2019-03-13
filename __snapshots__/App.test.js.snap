@@ -20,7 +20,7 @@ exports[`App Tests App renders the same way every time 1`] = `
       }
     }
   >
-    Counter: 
+    Counter:
     0
   </Text>
   <View

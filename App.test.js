@@ -55,4 +55,17 @@ describe('App Tests', () => {
     wrapper.find('TouchableOpacity').at(1).props().onPress()
     expect(wrapper.state('counter')).toBe(4)
   })
+
+  it('uslessMethodJustForTesting', () => {
+    const wrapper = shallow(<App />)
+    const instance = wrapper.instance().uslessMethodJustForTesting()
+    expect(instance).toEqual('There was no message')
+  })
+
+  it('uslessMethodJustForTesting with "Hello There"', () => {
+    const message = 'Hello There'
+    const wrapper = shallow(<App />)
+    const instance = wrapper.instance().uslessMethodJustForTesting(message)
+    expect(instance).toEqual(message)
+  })
 })
