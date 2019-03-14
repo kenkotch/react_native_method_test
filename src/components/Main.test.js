@@ -3,18 +3,18 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { shallow, configure } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
-import App from './App'
+import Main from './Main'
 
 configure({ adapter: new Adapter() })
 
-describe('App Tests', () => {
-  it('App renders the same way every time', () => {
-    const tree = renderer.create(<App />).toJSON()
+describe('Main Tests', () => {
+  it('Main renders the same way every time', () => {
+    const tree = renderer.create(<Main />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   it('incrementCounter should add 1 to counter', () => {
-    const wrapper = shallow(<App />)
+    const wrapper = shallow(<Main />)
     const instance = wrapper.instance()
     expect(wrapper.state('counter')).toBe(0)
     instance.incrementCounter(1)
@@ -22,7 +22,7 @@ describe('App Tests', () => {
   })
 
   it('incrementCounterByFour should add 4 to counter', () => {
-    const wrapper = shallow(<App />)
+    const wrapper = shallow(<Main />)
     const instance = wrapper.instance()
     expect(wrapper.state('counter')).toBe(0)
     instance.incrementCounter(4)
@@ -30,7 +30,7 @@ describe('App Tests', () => {
   })
 
   it('resetCounter', () => {
-    const wrapper = shallow(<App />)
+    const wrapper = shallow(<Main />)
     const instance = wrapper.instance()
     instance.incrementCounter(8)
     expect(wrapper.state('counter')).toBe(8)
@@ -39,7 +39,7 @@ describe('App Tests', () => {
   })
 
   it('onPress incrementCounter(1)', () => {
-    const wrapper = shallow(<App />)
+    const wrapper = shallow(<Main />)
     const instance = wrapper.instance()
     const spy = jest.spyOn(instance, 'incrementCounter')
 
@@ -48,7 +48,7 @@ describe('App Tests', () => {
   })
 
   it('onPress incrementCounter(4)', () => {
-    const wrapper = shallow(<App />)
+    const wrapper = shallow(<Main />)
     const instance = wrapper.instance()
     const spy = jest.spyOn(instance, 'incrementCounter')
 
@@ -57,14 +57,14 @@ describe('App Tests', () => {
   })
 
   it('uslessMethodJustForTesting', () => {
-    const wrapper = shallow(<App />)
+    const wrapper = shallow(<Main />)
     const instance = wrapper.instance().uslessMethodJustForTesting()
     expect(instance).toEqual('There was no message')
   })
 
   it('uslessMethodJustForTesting with "Hello There"', () => {
     const message = 'Hello There'
-    const wrapper = shallow(<App />)
+    const wrapper = shallow(<Main />)
     const instance = wrapper.instance().uslessMethodJustForTesting(message)
     expect(instance).toEqual(message)
   })

@@ -5,7 +5,7 @@ import {
   View
 } from 'react-native'
 
-export default class App extends React.Component {
+class Main extends React.Component {
   state = {
     counter: 0
   }
@@ -20,9 +20,7 @@ export default class App extends React.Component {
     this.setState({ counter: 0 })
   }
 
-  uslessMethodJustForTesting = (message = 'There was no message') => {
-    return message
-  }
+  uslessMethodJustForTesting = (message = 'There was no message') => message
 
   render() {
     const { counter } = this.state
@@ -71,3 +69,5 @@ const styles = {
     margin: 10
   }
 }
+
+export default Main
