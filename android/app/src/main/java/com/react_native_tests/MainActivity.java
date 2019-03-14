@@ -1,4 +1,4 @@
-package com.react_native_method_test;
+package com.react_native_tests;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "react_native_method_test";
+        return "react_native_tests";
     }
 }
