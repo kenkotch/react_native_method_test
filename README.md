@@ -1,2 +1,2 @@
-# react_native_method_test
-simple react native method test example
+# react_native_tests
+simple react native test example with redux
