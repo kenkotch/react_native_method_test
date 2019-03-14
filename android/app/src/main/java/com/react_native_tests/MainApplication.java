@@ -1,4 +1,4 @@
-package com.react_native_method_test;
+package com.react_native_tests;
 
 import android.app.Application;
 

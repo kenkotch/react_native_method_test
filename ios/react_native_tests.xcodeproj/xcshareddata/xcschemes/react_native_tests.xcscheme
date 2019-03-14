@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "react_native_method_test.app"
-               BlueprintName = "react_native_method_test"
-               ReferencedContainer = "container:react_native_method_test.xcodeproj">
+               BuildableName = "react_native_tests.app"
+               BlueprintName = "react_native_tests"
+               ReferencedContainer = "container:react_native_tests.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "react_native_method_testTests.xctest"
-               BlueprintName = "react_native_method_testTests"
-               ReferencedContainer = "container:react_native_method_test.xcodeproj">
+               BuildableName = "react_native_testsTests.xctest"
+               BlueprintName = "react_native_testsTests"
+               ReferencedContainer = "container:react_native_tests.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "react_native_method_testTests.xctest"
-               BlueprintName = "react_native_method_testTests"
-               ReferencedContainer = "container:react_native_method_test.xcodeproj">
+               BuildableName = "react_native_testsTests.xctest"
+               BlueprintName = "react_native_testsTests"
+               ReferencedContainer = "container:react_native_tests.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "react_native_method_test.app"
-            BlueprintName = "react_native_method_test"
-            ReferencedContainer = "container:react_native_method_test.xcodeproj">
+            BuildableName = "react_native_tests.app"
+            BlueprintName = "react_native_tests"
+            ReferencedContainer = "container:react_native_tests.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "react_native_method_test.app"
-            BlueprintName = "react_native_method_test"
-            ReferencedContainer = "container:react_native_method_test.xcodeproj">
+            BuildableName = "react_native_tests.app"
+            BlueprintName = "react_native_tests"
+            ReferencedContainer = "container:react_native_tests.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "react_native_method_test.app"
-            BlueprintName = "react_native_method_test"
-            ReferencedContainer = "container:react_native_method_test.xcodeproj">
+            BuildableName = "react_native_tests.app"
+            BlueprintName = "react_native_tests"
+            ReferencedContainer = "container:react_native_tests.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
