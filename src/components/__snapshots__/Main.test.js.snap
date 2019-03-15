@@ -15,12 +15,10 @@ exports[`Main Tests Main renders the same way every time 1`] = `
     style={
       Object {
         "fontSize": 20,
-        "margin": 10,
-        "textAlign": "center",
       }
     }
   >
-    Counter:
+    Counter from local state: 
     0
   </Text>
   <View
@@ -59,6 +57,80 @@ exports[`Main Tests Main renders the same way every time 1`] = `
   >
     <Text>
       Increment by 4
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <Text>
+      Reset
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginTop": 15,
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "fontSize": 20,
+      }
+    }
+  >
+    Count from redux state: 
+    0
+  </Text>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <Text>
+      Increment by 1
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <Text>
+      Increment by 5
     </Text>
   </View>
   <View

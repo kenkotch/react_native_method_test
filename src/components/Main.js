@@ -4,8 +4,16 @@ import {
   TouchableOpacity,
   View
 } from 'react-native'
+import PropTypes from 'prop-types'
+import styles from './Main.styles'
 
 class Main extends React.Component {
+  static propTypes = {
+    addCount: PropTypes.func.isRequired,
+    count: PropTypes.number.isRequired,
+    resetCount: PropTypes.func.isRequired
+  }
+
   state = {
     counter: 0
   }
@@ -23,12 +31,17 @@ class Main extends React.Component {
   uslessMethodJustForTesting = (message = 'There was no message') => message
 
   render() {
+    const {
+      addCount,
+      count,
+      resetCount
+    } = this.props
     const { counter } = this.state
     return (
       <View style={ styles.container }>
-        <Text style={ styles.welcome }>
-          Counter:
-          { counter }
+        {/* local state counter */}
+        <Text style={ styles.subTitle }>
+          Counter from local state: { counter }
         </Text>
         <TouchableOpacity
           onPress={ () => this.incrementCounter(1) }
@@ -51,22 +64,37 @@ class Main extends React.Component {
             Reset
           </Text>
         </TouchableOpacity>
+
+        <View style={ styles.space } />
+
+        {/* redux state count */}
+        <Text style={ styles.subTitle }>
+          Count from redux state: { count }
+        </Text>
+        <TouchableOpacity
+          onPress={ () => addCount() }
+        >
+          <Text>
+            Increment by 1
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={ () => addCount(5) }
+        >
+          <Text>
+            Increment by 5
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={ () => resetCount() }
+        >
+          <Text>
+            Reset
+          </Text>
+        </TouchableOpacity>
+
       </View>
     )
-  }
-}
-
-const styles = {
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10
   }
 }
 
