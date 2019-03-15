@@ -8,7 +8,7 @@ simple react native test examples with redux
 
 
 #### TODO:
-- [ ] add actions and action tests
+- [x] add actions and action tests
 - [ ] add connected components and test
 - [ ] add `reselect` library then implement and test
 - [ ] add fetchMock tests (and create something to pretend to fetch)
