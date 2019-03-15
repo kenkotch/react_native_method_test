@@ -1,5 +1,6 @@
 import {
-  COUNT
+  COUNT,
+  RESET_COUNT
 } from '../constants/types'
 
 const INITIAL_STATE = {
@@ -11,7 +12,12 @@ export default (state = INITIAL_STATE, action) => {
     case COUNT:
       return {
         ...state,
-        count: state.count + 1
+        count: state.count + action.payload
+      }
+    case RESET_COUNT:
+      return {
+        ...state,
+        count: 0
       }
     default:
       return state

@@ -1,6 +1,7 @@
 import reducer from './reducer'
 import {
-  COUNT
+  COUNT,
+  RESET_COUNT
 } from '../constants/types'
 
 describe('Reducer Tests', () => {
@@ -14,9 +15,21 @@ describe('Reducer Tests', () => {
 
   it('can handle COUNT', () => {
     expect(reducer(undefined, {
-      type: COUNT
+      type: COUNT,
+      payload: 1
     })).toEqual({
       count: 1
+    })
+  })
+
+  it('can handle RESET_COUNT', () => {
+    const INITIAL_STATE = {
+      count: 7
+    }
+    expect(reducer(INITIAL_STATE, {
+      type: RESET_COUNT
+    })).toEqual({
+      count: 0
     })
   })
 })
